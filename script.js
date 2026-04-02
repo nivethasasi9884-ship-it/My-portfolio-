@@ -41,4 +41,34 @@ window.onscroll = () => {
     //remove toogle icon and navbar when click navbar links (scroll)//
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
-}
+}// EmailJS init
+(function () {
+  emailjs.init("mlytJ6amAk3uiH7z2");
+})();
+
+// Form submit
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  console.log("Working ✅");
+
+  emailjs.sendForm("service_8nu577s", "template_y544jn3", this)
+    .then(function () {
+      alert("Message Sent ✅");
+    })
+    .catch(function (error) {
+      console.log(error);
+      alert("Error ❌");
+    });
+});
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  console.log("NAME:", formData.get("name"));
+  console.log("EMAIL:", formData.get("email"));
+  console.log("PHONE:", formData.get("phone"));
+  console.log("MESSAGE:", formData.get("message"));
+});

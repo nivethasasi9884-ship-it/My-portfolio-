@@ -12,6 +12,7 @@
 
 
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
 <body>
 <!--header design-->
@@ -49,12 +50,6 @@
      </div>
     </div>
     
-    <div class="home-sci">
-        <a href="#"><i class='bx bxl-instagram'></i></a>
-        <a href="#"><i class='bx bxl-github'></i></a>
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-        <span class="animate" style="--i:6;"></span>
-    </div>
 
     <div class="home-imgHover">
     </div>
@@ -195,50 +190,73 @@
 </section>
 
 <section class="projects" id="projects">
-  <h2 class="heading">My <span>Projects</span></h2>
+  <h2 class="heading">My <span>Projects</span></h2
   <div class="project-box">
     <p style="text-align:center; font-size:1.8rem; color:var(--text-color);">
-      🚀 Projects will be added soon as I continue my learning journey.
+      🚀 Activity-Tracker
+    <a href="https://nivethasasi9884-ship-it.github.io/Activity-tracker" target="blank"</a>
     </p>
-  </div>
-</section>
+<div class="project-box">
+  <h3>🚀 Activity Tracker</h3>
 
+  <p class="project-desc">
+    A simple web app to track daily activities.
+  </p>
+
+  <a href="https://nivethasasi9884-ship-it.github.io/Activity-tracker/" target="_blank" class="btn">
+    View on GitHub 🔗
+  </a>
+</div>
+</section>
 <!--contact section design-->
 <section class="contact" id="contact">
   <h2 class="heading">Contact <span> Me!!</span></h2>
-  <form action="#">
+
+  <!-- 👇 INGAYE CHANGE -->
+  <form id="contact-form">
     <div class="input-box">
       <div class="input-field">
-        <input type="text" placeholder="Full Name" required>
+        <input type="text" name="name" placeholder="Full Name" required>
         <span class="focus"></span>
       </div>
 
       <div class="input-field"> 
-        <input type="text" placeholder="Email Address" required>
+        <input type="text" name="email" placeholder="Email Address" required>
         <span class="focus"></span>
       </div> 
       
-      <div class="input-field"> 
-        <input type="number" placeholder="Number" required>
+       <div class="input-field"> 
+        <input type="text" name="subject" placeholder="Number" required>
         <span class="focus"></span>
       </div>
-      
-      <div class="input-field"> 
-        <input type="text" placeholder=" Email Subject" required>
-        <span class="focus"></span>
-      </div>
-    </div>
+  
 
-      <div class="textarea-field">
-        <textarea name="" id="" cols="30" rows="10"placeholder="Your Message" required></textarea>
-      <span class="focus"></span>
-    </div>
+       <div class="input-field"> 
+        <input type="phone" name="phone" placeholder="Message" required>
+        <span class="focus"></span
+        </div>
+      
+       
+       
 
     <div class="btn-box btns">
       <button type="Submit" class=" btn">Submit</button>
+      
+
+</form>
+
   </div>
   </form>
 </section>
+  <!-- ✅ FIXED SOCIAL LINKS -->
+    <div class="home-sci">
+        <a href="https://instagram.com/your-id" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://github.com/nivethasasi9884-ship-it" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/nivetha-sasi-b2613b3b8" target="_blank"><i class='bx bxl-linkedin'></i></a>
+    </div>
+</section>
+
+
 
 
 

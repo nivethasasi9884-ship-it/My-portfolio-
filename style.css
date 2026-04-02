@@ -880,3 +880,31 @@ span {
         width: 0;
     }
 }
+
+.project-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.project-box .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00abf0;
+  color: #00abf0;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-box .btn:hover {
+  background: #00abf0;
+  color: #081b29;
+}
+.project-desc {
+  color: #ccc;
+  font-size: 14px;
+  margin: 10px 0 15px;
+}
+.project-box .btn {
+  color: #00abf0;
+}
