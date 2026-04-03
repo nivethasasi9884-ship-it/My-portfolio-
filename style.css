@@ -530,27 +530,27 @@ span {
 /* Contact */
 .contact {
     min-height: auto;
-    padding-bottom: 7rem ;
+    padding-bottom: 7rem;
 }
 
 .contact form {
-  max-width: 70rem;
-  margin: 0 auto;
-  text-align: center;
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
 }
 
- .contact form .input-box {
-    position:relative;
+.contact form .input-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
- }
+}
 
- .contact form .input-box .input-field {
+.contact form .input-box .input-field {
     position: relative;
     width: 49%;
     margin: .8rem 0;
- }
+}
 
 .contact form .input-box .input-field input,
 .contact form .textarea-field textarea { 
@@ -582,10 +582,10 @@ span {
     transition: .5s;
 }
 
-.contact form .input-box .input-field input:focus~.focus,
-.contact form .input-box .input-field input:valid~.focus,
-.contact form .textarea-field textarea:focus~.focus,
-.contact form .textarea-field textarea:valid~.focus {
+.contact form .input-box .input-field input:focus ~ .focus,
+.contact form .input-box .input-field input:valid ~ .focus,
+.contact form .textarea-field textarea:focus ~ .focus,
+.contact form .textarea-field textarea:valid ~ .focus {
     width: 100%;
 }
 
@@ -599,8 +599,11 @@ span {
     resize: none;
 }
 
-.contact form .btn-box.btns .btn {
-    cursor: pointer;
+/* ✅ Button center fix */
+.contact form .btn-box.btns {
+    display: flex;
+    justify-content: center;
+     width: 100%;
 }
 
 /* Footer */
@@ -886,25 +889,72 @@ span {
   margin-top: 20px;
 }
 
+.project-box {
+    position: relative;
+    border: .2rem solid var(--main-color);
+    padding: 2rem;
+    border-radius: .6rem;
+    overflow: hidden;
+}
+
+.project-box .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+/* 🔥 HOVER EFFECT */
+.project-box:hover .focus {
+    width: 100%;
+}
+.project-box {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.project-box .project-desc {
+    color: var(--main-color);
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
 .project-box .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #00abf0;
-  color: #00abf0;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    color: var(--main-color);
+    font-weight: 500;
+    overflow: hidden;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.project-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.project-box .btn:hover::before {
+    width: 100%;
 }
 
 .project-box .btn:hover {
-  background: #00abf0;
-  color: #081b29;
-}
-.project-desc {
-  color: #ccc;
-  font-size: 14px;
-  margin: 10px 0 15px;
-}
-.project-box .btn {
-  color: #00abf0;
+    color: var(--main-color);
 }

@@ -50,23 +50,23 @@ window.onscroll = () => {
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
+  const form = this; // 👈 add this
+
   console.log("Working ✅");
 
-  emailjs.sendForm("service_8nu577s", "template_y544jn3", this)
+  emailjs.sendForm("service_8nu577s", "template_y544jn3", form)
     .then(function () {
       alert("Message Sent ✅");
+
+      // ✅ Auto clear the form
+      form.reset();
     })
     .catch(function (error) {
       console.log(error);
       alert("Error ❌");
     });
-});
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(this);
-
+  const formData = new FormData(form);
   console.log("NAME:", formData.get("name"));
   console.log("EMAIL:", formData.get("email"));
   console.log("PHONE:", formData.get("phone"));
